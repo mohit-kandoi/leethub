@@ -112,11 +112,25 @@ class Solution {
             else return false;
         }
         boolean[] arr = new boolean[1];
-        helper(root, S, 0, arr);
+        helper(root, S,0,arr);
+        
         return arr[0];
         
     }
     // static boolean check = false;
+    // boolean helper(Node root, int s){
+    //     if(s == 0) return true;
+    //     if(root == null) return false;
+    //     if(root.left == null && root.right == null && s-root.data == 0){
+    //         return true;
+    //     }
+    //     s -=  root.data;
+    //     if(helper(root.left, s)) return true;
+    //     if(helper(root.right, s)) return true;
+    //     s += root.data;
+        
+    //     return false;
+    // }
     void helper(Node root, int S, int sum, boolean[] arr){
         if(root == null) return;
         if(root.left == null && root.right == null){
