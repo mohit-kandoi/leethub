@@ -31,13 +31,13 @@ class Solution {
         int rs = solve(node.right);
         
         
-        int tempAns = Math.max(Math.max(ls,rs)+node.val, node.val);
+        int tempAns = Math.max(ls,rs)+node.val;
         int ans = Math.max(tempAns,ls+rs+node.val);
-        // int res = Math.max(ans,node.val);
+        int res = Math.max(ans,node.val);
         
-        sum = Math.max(ans, sum);
+        sum = Math.max(res, sum);
         
-        return tempAns;
+        return Math.max(node.val,tempAns);
         
         
         
