@@ -1,23 +1,11 @@
 class Solution {
-    int sum = 0;
     public int addDigits(int num) {
-        sum = num;
-        while(sum > 9){
-            num = sum;
-            sum = 0;
-            helper(num);
-        }
-        return sum;
+        
+        if(num == 0) return 0;
+        
+        int rem = num%9;
+        if(rem == 0) return 9;
+        else return rem;
         
     }
-    
-     void helper(int num){
-         
-         while(num > 0){
-            int rem = num%10;
-            sum = sum + rem;
-            num = num/10;
-         }
-         
-     }
 }
