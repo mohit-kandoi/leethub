@@ -19,7 +19,7 @@ class Solution {
             }
         }
         if(flag){
-             Arrays.sort(nums);
+             reverse(nums,0,nums.length-1);
         }
         else{
             for(int i=nums.length-1; i>=0; i--){
@@ -39,6 +39,16 @@ class Solution {
         }  
         
     }
+    
+     public void reverse(int[] nums,int start, int end){
+         while(start < end){
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+             start++;
+             end--;
+         }
+     }
     
     public void swap(int[] nums,int i, int index){
         int temp = nums[i];
